@@ -1,0 +1,92 @@
+diff -ru bijiben-3.7.2-orig/src/bijiben-shell-search-provider.c bijiben-3.7.2/src/bijiben-shell-search-provider.c
+--- bijiben-3.7.2-orig/src/bijiben-shell-search-provider.c	2012-11-22 16:20:43.401541413 +0100
++++ bijiben-3.7.2/src/bijiben-shell-search-provider.c	2012-11-22 16:29:33.313529613 +0100
+@@ -79,7 +79,7 @@
+                                             &error);
+ 
+   if (error)
+-    g_warning (error->message);
++    g_warning ("%s", error->message);
+ 
+   return result ;
+ }
+@@ -426,7 +426,7 @@
+ 
+   if (error)
+   {
+-     g_warning (error->message);
++     g_warning ("%s", error->message);
+      g_application_release (app);
+   }
+ }
+Only in bijiben-3.7.2/src: bijiben-shell-search-provider.c~
+diff -ru bijiben-3.7.2-orig/src/bjb-app-menu.c bijiben-3.7.2/src/bjb-app-menu.c
+--- bijiben-3.7.2-orig/src/bjb-app-menu.c	2012-11-22 16:20:43.402541409 +0100
++++ bijiben-3.7.2/src/bjb-app-menu.c	2012-11-22 16:27:31.164758634 +0100
+@@ -28,7 +28,7 @@
+ 
+   if (error)
+   {
+-    g_warning (error->message);
++    g_warning ("%s", error->message);
+     g_error_free (error);
+   }
+ }
+@@ -124,7 +124,7 @@
+ 
+   if (error)
+   {
+-    g_warning (error->message);
++    g_warning ("%s", error->message);
+     g_error_free (error);
+   }
+ }
+Only in bijiben-3.7.2/src: bjb-app-menu.c~
+diff -ru bijiben-3.7.2-orig/src/bjb-bijiben.c bijiben-3.7.2/src/bjb-bijiben.c
+--- bijiben-3.7.2-orig/src/bjb-bijiben.c	2012-11-22 16:20:43.405541406 +0100
++++ bijiben-3.7.2/src/bjb-bijiben.c	2012-11-22 16:25:32.977983519 +0100
+@@ -255,7 +255,7 @@
+ 
+   else if (error)
+   {
+-    g_warning (error->message);
++    g_warning ("%s", error->message);
+     g_error_free (error);
+   }
+ 
+Only in bijiben-3.7.2/src: bjb-bijiben.c~
+diff -ru bijiben-3.7.2-orig/src/libbiji/biji-note-obj.c bijiben-3.7.2/src/libbiji/biji-note-obj.c
+--- bijiben-3.7.2-orig/src/libbiji/biji-note-obj.c	2012-11-22 16:20:43.405541406 +0100
++++ bijiben-3.7.2/src/libbiji/biji-note-obj.c	2012-11-22 16:21:16.622475041 +0100
+@@ -352,7 +352,7 @@
+ 
+   if (error)
+   {
+-    g_message (error->message);
++    g_message ("%s", error->message);
+     g_error_free (error);
+     error = NULL;
+   }
+Only in bijiben-3.7.2/src/libbiji: biji-note-obj.c~
+diff -ru bijiben-3.7.2-orig/src/libbiji/biji-tracker.c bijiben-3.7.2/src/libbiji/biji-tracker.c
+--- bijiben-3.7.2-orig/src/libbiji/biji-tracker.c	2012-11-22 16:20:43.404541405 +0100
++++ bijiben-3.7.2/src/libbiji/biji-tracker.c	2012-11-22 16:24:22.160114228 +0100
+@@ -60,7 +60,7 @@
+ 
+   if (error)
+   {
+-    g_warning (error->message);
++    g_warning ("%s", error->message);
+     g_error_free (error);
+   }
+ }
+@@ -109,7 +109,7 @@
+ 
+   if (error)
+   {
+-    g_warning (error->message);
++    g_warning ("%s", error->message);
+     g_error_free (error);
+   }
+ 
+Only in bijiben-3.7.2/src/libbiji: biji-tracker.c~
