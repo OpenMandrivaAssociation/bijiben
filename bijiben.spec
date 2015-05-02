@@ -12,6 +12,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{ver
 BuildRequires:	intltool
 BuildRequires:	itstool
 BuildRequires:	pkgconfig(clutter-gtk-1.0)
+BuildRequires:	pkgconfig(goa-1.0)
 BuildRequires:	pkgconfig(gio-2.0)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gnome-doc-utils)
