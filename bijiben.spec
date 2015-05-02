@@ -46,11 +46,6 @@ notes, quickly find it back.
 find %{buildroot} -name "*.la" -delete
 find %{buildroot} -name "*.a" -delete
 
-# fix error
-cp -r %{buildroot}/%{buildroot}/%{_datadir}/%{name}/Default.css %{buildroot}/%{_datadir}/%{name}/
-rm -rf %{buildroot}/%{buildroot}/%{_datadir}/%{name}/Default.css
-rm -f %{buildroot}/usr/doc/%{name}/*
-
 %find_lang %{name} --with-gnome
 
 %files -f %{name}.lang
