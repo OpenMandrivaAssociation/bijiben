@@ -8,7 +8,6 @@ License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		http://www.gnome.org
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
-Patch1:		bijiben-string-literal.patch
 
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(clutter-gtk-1.0)
