@@ -17,9 +17,12 @@ BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libxml-2.0)
-BuildRequires:	pkgconfig(tracker-sparql-0.14)
+BuildRequires:	pkgconfig(tracker-sparql-1.0)
 BuildRequires:	pkgconfig(uuid)
 BuildRequires:	pkgconfig(webkitgtk-3.0)
+BuildRequires:	pkgconfig(libecal-1.2)
+BuildRequires:	pkgconfig(libedataserver-1.2)
+BuildRequires:	pkgconfig(libedataserverui-1.2)
 
 %description
 Simple note editor which emphasis on visuals : quickly write
