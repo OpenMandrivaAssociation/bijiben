@@ -2,7 +2,7 @@
 
 Summary:	Simple Note Viewer
 Name:		bijiben
-Version:	3.7.2
+Version:	 3.17.1
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
