@@ -2,7 +2,7 @@
 
 Summary:	Simple Note Viewer
 Name:		bijiben
-Version:	 3.17.1
+Version:	3.17.1
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
@@ -20,7 +20,6 @@ BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(tracker-sparql-0.14)
 BuildRequires:	pkgconfig(uuid)
 BuildRequires:	pkgconfig(webkitgtk-3.0)
-BuildRequires:	pkgconfig(zeitgeist-1.0)
 
 %description
 Simple note editor which emphasis on visuals : quickly write
@@ -31,8 +30,7 @@ notes, quickly find it back.
 %apply_patches
 
 %build
-%configure2_5x \
-	--disable-static \
+%configure \
 	--disable-schemas-compile
 
 %make
