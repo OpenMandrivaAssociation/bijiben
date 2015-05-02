@@ -60,4 +60,7 @@ find %{buildroot} -name "*.a" -delete
 %{_iconsdir}/hicolor/*/apps/%{name}.svg
 %{_libdir}/%{name}/libgd.so
 %{_libexecdir}/%{name}-shell-search-provider
+%{_datadir}/appdata/bijiben.appdata.xml
+%{_datadir}/icons/hicolor/scalable/apps/bijiben-symbolic.svg
+%{_datadir}/mime/packages/bijiben.xml
 
