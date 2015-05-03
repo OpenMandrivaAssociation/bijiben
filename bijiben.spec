@@ -57,8 +57,6 @@ find %{buildroot} -name "*.a" -delete
 %{_datadir}/glib-2.0/schemas/org.gnome.bijiben.gschema.xml
 %{_datadir}/gnome-shell/search-providers/bijiben-search-provider.ini
 %{_iconsdir}/hicolor/*/apps/%{name}.png
-%{_iconsdir}/hicolor/*/apps/%{name}.svg
-%{_libdir}/%{name}/libgd.so
 %{_libexecdir}/%{name}-shell-search-provider
 %{_datadir}/appdata/bijiben.appdata.xml
 %{_datadir}/icons/hicolor/scalable/apps/bijiben-symbolic.svg
