@@ -2,8 +2,8 @@
 
 Summary:	Simple Note Viewer
 Name:		bijiben
-Version:	3.17.1
-Release:	3
+Version:	3.18.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		http://www.gnome.org
@@ -11,6 +11,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{ver
 
 BuildRequires:	intltool
 BuildRequires:	itstool
+BuildRequires:	yelp-tools
 BuildRequires:	pkgconfig(clutter-gtk-1.0)
 BuildRequires:	pkgconfig(goa-1.0)
 BuildRequires:	pkgconfig(gio-2.0)
@@ -35,7 +36,7 @@ notes, quickly find it back.
 
 %build
 %configure \
-	--disable-schemas-compile
+	--disable-update-mimedb
 
 %make
 
