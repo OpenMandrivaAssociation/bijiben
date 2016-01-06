@@ -1,4 +1,5 @@
 removed_sources:
   bijiben-3.17.1.tar.xz: e215ebe0643ed89a0a03324692d38d83d717abbb
-sources:
   bijiben-3.18.0.tar.xz: 982e1fd12cbfe7594ea7c6a5dc09535990dfcc0e
+sources:
+  bijiben-3.18.2.tar.xz: ef3fa14107304a1be36697c5c6a6f9946df63af3
