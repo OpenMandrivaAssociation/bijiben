@@ -3,7 +3,7 @@
 
 Summary:	Simple Note Viewer
 Name:		bijiben
-Version:	3.18.2
+Version:	3.24.2
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
@@ -22,7 +22,7 @@ BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(tracker-sparql-1.0)
 BuildRequires:	pkgconfig(uuid)
-BuildRequires:	pkgconfig(webkitgtk-3.0)
+BuildRequires:	pkgconfig(webkit2gtk-4.0)
 BuildRequires:	pkgconfig(libecal-1.2)
 BuildRequires:	pkgconfig(libedataserver-1.2)
 BuildRequires:	pkgconfig(libedataserverui-1.2)
@@ -53,14 +53,14 @@ find %{buildroot} -name "*.a" -delete
 %files -f %{name}.lang
 %doc NEWS AUTHORS COPYING ChangeLog INSTALL NEWS README
 %{_bindir}/%{name}
-%{_datadir}/applications/%{name}.desktop
+%{_datadir}/applications/org.gnome.%{name}.desktop
 %{_datadir}/%{name}
-%{_datadir}/dbus-1/services/org.gnome.Bijiben.SearchProvider.service
+%{_datadir}/dbus-1/services/org.gnome.bijiben.SearchProvider.service
 %{_datadir}/glib-2.0/schemas/org.gnome.bijiben.gschema.xml
-%{_datadir}/gnome-shell/search-providers/bijiben-search-provider.ini
-%{_iconsdir}/hicolor/*/apps/%{name}.png
+%{_datadir}/gnome-shell/search-providers/org.gnome.bijiben-search-provider.ini
+%{_iconsdir}/hicolor/*/apps/org.gnome.%{name}.png
 %{_libexecdir}/%{name}-shell-search-provider
-%{_datadir}/appdata/bijiben.appdata.xml
-%{_datadir}/icons/hicolor/scalable/apps/bijiben-symbolic.svg
-%{_datadir}/mime/packages/bijiben.xml
+%{_datadir}/appdata/org.gnome.bijiben.appdata.xml
+%{_datadir}/icons/hicolor/scalable/apps/org.gnome.bijiben-symbolic.svg
+%{_datadir}/mime/packages/org.gnome.bijiben.xml
 
