@@ -51,7 +51,7 @@ find %{buildroot} -name "*.a" -delete
 %find_lang %{name} --with-gnome
 
 %files -f %{name}.lang
-%doc NEWS AUTHORS COPYING ChangeLog INSTALL NEWS README
+%doc NEWS AUTHORS COPYING NEWS README
 %{_bindir}/%{name}
 %{_datadir}/applications/org.gnome.%{name}.desktop
 %{_datadir}/%{name}
@@ -60,7 +60,7 @@ find %{buildroot} -name "*.a" -delete
 %{_datadir}/gnome-shell/search-providers/org.gnome.bijiben-search-provider.ini
 %{_iconsdir}/hicolor/*/apps/org.gnome.%{name}.png
 %{_libexecdir}/%{name}-shell-search-provider
-%{_datadir}/appdata/org.gnome.bijiben.appdata.xml
+%{_datadir}/metainfo/org.gnome.%{name}.appdata.xml
 %{_datadir}/icons/hicolor/scalable/apps/org.gnome.bijiben-symbolic.svg
 %{_datadir}/mime/packages/org.gnome.bijiben.xml
 
