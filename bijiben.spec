@@ -3,8 +3,8 @@
 
 Summary:	Simple Note Viewer
 Name:		bijiben
-Version:	3.24.2
-Release:	2
+Version:	3.30.1
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		http://www.gnome.org
@@ -20,12 +20,14 @@ BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libxml-2.0)
-BuildRequires:	pkgconfig(tracker-sparql-1.0)
+BuildRequires:	pkgconfig(tracker-sparql-2.0)
 BuildRequires:	pkgconfig(uuid)
 BuildRequires:	pkgconfig(webkit2gtk-4.0)
 BuildRequires:	pkgconfig(libecal-1.2)
 BuildRequires:	pkgconfig(libedataserver-1.2)
 BuildRequires:	pkgconfig(libedataserverui-1.2)
+BuildRequires:	libxml2-utils
+BuildRequires:	meson
 
 %description
 Simple note editor which emphasis on visuals : quickly write
@@ -33,16 +35,14 @@ notes, quickly find it back.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
-%configure \
-	--disable-update-mimedb
-
-%make
+%meson -Dupdate_mimedb=false
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 
 #we don't want these
 find %{buildroot} -name "*.la" -delete
@@ -51,16 +51,17 @@ find %{buildroot} -name "*.a" -delete
 %find_lang %{name} --with-gnome
 
 %files -f %{name}.lang
-%doc NEWS AUTHORS COPYING ChangeLog INSTALL NEWS README
+%doc NEWS AUTHORS COPYING NEWS README
 %{_bindir}/%{name}
 %{_datadir}/applications/org.gnome.%{name}.desktop
 %{_datadir}/%{name}
 %{_datadir}/dbus-1/services/org.gnome.bijiben.SearchProvider.service
 %{_datadir}/glib-2.0/schemas/org.gnome.bijiben.gschema.xml
+%{_datadir}/glib-2.0/schemas/org.gnome.bijiben.enums.xml
 %{_datadir}/gnome-shell/search-providers/org.gnome.bijiben-search-provider.ini
 %{_iconsdir}/hicolor/*/apps/org.gnome.%{name}.png
 %{_libexecdir}/%{name}-shell-search-provider
-%{_datadir}/appdata/org.gnome.bijiben.appdata.xml
+%{_datadir}/metainfo/org.gnome.%{name}.appdata.xml
 %{_datadir}/icons/hicolor/scalable/apps/org.gnome.bijiben-symbolic.svg
 %{_datadir}/mime/packages/org.gnome.bijiben.xml
 
