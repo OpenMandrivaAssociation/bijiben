@@ -57,6 +57,7 @@ find %{buildroot} -name "*.a" -delete
 %{_datadir}/%{name}
 %{_datadir}/dbus-1/services/org.gnome.bijiben.SearchProvider.service
 %{_datadir}/glib-2.0/schemas/org.gnome.bijiben.gschema.xml
+%{_datadir}/glib-2.0/schemas/org.gnome.bijiben.enums.xml
 %{_datadir}/gnome-shell/search-providers/org.gnome.bijiben-search-provider.ini
 %{_iconsdir}/hicolor/*/apps/org.gnome.%{name}.png
 %{_libexecdir}/%{name}-shell-search-provider
