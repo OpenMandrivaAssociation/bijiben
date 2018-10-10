@@ -26,6 +26,8 @@ BuildRequires:	pkgconfig(webkit2gtk-4.0)
 BuildRequires:	pkgconfig(libecal-1.2)
 BuildRequires:	pkgconfig(libedataserver-1.2)
 BuildRequires:	pkgconfig(libedataserverui-1.2)
+BuildRequires:	libxml2-utils
+BuildRequires:	meson
 
 %description
 Simple note editor which emphasis on visuals : quickly write
@@ -33,16 +35,14 @@ notes, quickly find it back.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
-%configure \
-	--disable-update-mimedb
-
-%make
+%meson -Dupdate_mimedb=false
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 
 #we don't want these
 find %{buildroot} -name "*.la" -delete
