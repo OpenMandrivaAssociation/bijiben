@@ -3,7 +3,7 @@
 
 Summary:	Simple Note Viewer
 Name:		bijiben
-Version:	3.30.3
+Version:	3.34.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
@@ -23,7 +23,7 @@ BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(tracker-sparql-2.0)
 BuildRequires:	pkgconfig(uuid)
 BuildRequires:	pkgconfig(webkit2gtk-4.0)
-BuildRequires:	pkgconfig(libecal-1.2)
+BuildRequires:	pkgconfig(libecal-2.0)
 BuildRequires:	pkgconfig(libedataserver-1.2)
 BuildRequires:	pkgconfig(libedataserverui-1.2)
 BuildRequires:	libxml2-utils
@@ -51,17 +51,16 @@ find %{buildroot} -name "*.a" -delete
 %find_lang %{name} --with-gnome
 
 %files -f %{name}.lang
-%doc NEWS AUTHORS COPYING NEWS README
+%doc NEWS AUTHORS COPYING NEWS README.md
 %{_bindir}/%{name}
-%{_datadir}/applications/org.gnome.%{name}.desktop
+%{_datadir}/applications/org.gnome.Notes.desktop
 %{_datadir}/%{name}
-%{_datadir}/dbus-1/services/org.gnome.bijiben.SearchProvider.service
-%{_datadir}/glib-2.0/schemas/org.gnome.bijiben.gschema.xml
+%{_datadir}/dbus-1/services/org.gnome.Notes.SearchProvider.service
 %{_datadir}/glib-2.0/schemas/org.gnome.bijiben.enums.xml
-%{_datadir}/gnome-shell/search-providers/org.gnome.bijiben-search-provider.ini
-%{_iconsdir}/hicolor/*/apps/org.gnome.%{name}.png
+%{_datadir}/glib-2.0/schemas/org.gnome.Notes.gschema.xml
+%{_datadir}/gnome-shell/search-providers/org.gnome.Notes-search-provider.ini
+%{_iconsdir}/*/*/*/org.gnome.Notes*.*
 %{_libexecdir}/%{name}-shell-search-provider
-%{_datadir}/metainfo/org.gnome.%{name}.appdata.xml
-%{_datadir}/icons/hicolor/scalable/apps/org.gnome.bijiben-symbolic.svg
-%{_datadir}/mime/packages/org.gnome.bijiben.xml
+%{_datadir}/metainfo/org.gnome.Notes.appdata.xml
+%{_datadir}/mime/packages/org.gnome.Notes.xml
 
