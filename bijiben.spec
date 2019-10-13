@@ -23,7 +23,7 @@ BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(tracker-sparql-2.0)
 BuildRequires:	pkgconfig(uuid)
 BuildRequires:	pkgconfig(webkit2gtk-4.0)
-BuildRequires:	pkgconfig(libecal-1.2)
+BuildRequires:	pkgconfig(libecal-2.0)
 BuildRequires:	pkgconfig(libedataserver-1.2)
 BuildRequires:	pkgconfig(libedataserverui-1.2)
 BuildRequires:	libxml2-utils
