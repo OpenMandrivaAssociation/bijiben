@@ -3,7 +3,7 @@
 
 Summary:	Simple Note Viewer
 Name:		bijiben
-Version:	3.34.1
+Version:	3.34.2
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
@@ -63,4 +63,3 @@ find %{buildroot} -name "*.a" -delete
 %{_libexecdir}/%{name}-shell-search-provider
 %{_datadir}/metainfo/org.gnome.Notes.appdata.xml
 %{_datadir}/mime/packages/org.gnome.Notes.xml
-
