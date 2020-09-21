@@ -3,7 +3,7 @@
 
 Summary:	Simple Note Viewer
 Name:		bijiben
-Version:	3.37.92
+Version:	3.38.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
@@ -26,7 +26,7 @@ BuildRequires:	pkgconfig(webkit2gtk-4.0)
 BuildRequires:	pkgconfig(libecal-2.0)
 BuildRequires:	pkgconfig(libedataserver-1.2)
 BuildRequires:	pkgconfig(libedataserverui-1.2)
-#BuildRequires:  pkgconfig(libhandy-1)
+BuildRequires:  pkgconfig(libhandy-1)
 BuildRequires:	libxml2-utils
 BuildRequires:	meson
 
