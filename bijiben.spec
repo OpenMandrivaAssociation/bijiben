@@ -57,7 +57,7 @@ find %{buildroot} -name "*.a" -delete
 %{_datadir}/applications/org.gnome.Notes.desktop
 %{_datadir}/%{name}
 %{_datadir}/dbus-1/services/org.gnome.Notes.SearchProvider.service
-%{_datadir}/glib-2.0/schemas/org.gnome.bijiben.enums.xml
+#{_datadir}/glib-2.0/schemas/org.gnome.bijiben.enums.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.Notes.gschema.xml
 %{_datadir}/gnome-shell/search-providers/org.gnome.Notes-search-provider.ini
 %{_iconsdir}/*/*/*/org.gnome.Notes*.*
