@@ -26,7 +26,7 @@ BuildRequires:	pkgconfig(webkit2gtk-4.0)
 BuildRequires:	pkgconfig(libecal-2.0)
 BuildRequires:	pkgconfig(libedataserver-1.2)
 BuildRequires:	pkgconfig(libedataserverui-1.2)
-BuildRequires:  pkgconfig(libhandy-1)
+BuildRequires:  pkgconfig(libhandy-0.0)
 BuildRequires:	libxml2-utils
 BuildRequires:	meson
 
