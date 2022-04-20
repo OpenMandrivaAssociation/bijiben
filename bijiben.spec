@@ -56,7 +56,7 @@ find %{buildroot} -name "*.a" -delete
 %find_lang %{name} --with-gnome
 
 %files -f %{name}.lang
-%doc NEWS AUTHORS COPYING NEWS README.md
+%doc NEWS AUTHORS COPYING README.md
 %{_bindir}/%{name}
 %{_datadir}/applications/org.gnome.Notes.desktop
 %{_datadir}/%{name}
