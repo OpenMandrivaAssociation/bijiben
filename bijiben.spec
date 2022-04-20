@@ -9,7 +9,8 @@ License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		http://www.gnome.org
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
-
+# Upstream patch to fix compilation with meson 0.60+
+Patch0:   https://gitlab.gnome.org/GNOME/gnome-notes/-/commit/994af76ce5144062d55d141129bf6bf5fab002ee.patch
 BuildRequires:	intltool
 BuildRequires:	itstool
 BuildRequires:	yelp-tools
@@ -30,6 +31,8 @@ BuildRequires:  pkgconfig(libhandy-1)
 BuildRequires:  pkgconfig(libcurl)
 BuildRequires:	libxml2-utils
 BuildRequires:	meson
+
+Provides: gnome-notes
 
 %description
 Simple note editor which emphasis on visuals : quickly write
