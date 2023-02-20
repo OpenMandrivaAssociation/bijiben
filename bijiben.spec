@@ -4,13 +4,15 @@
 Summary:	Simple Note Viewer
 Name:		bijiben
 Version:	40.1
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		http://www.gnome.org
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 # Upstream patch to fix compilation with meson 0.60+
 Patch0:   https://gitlab.gnome.org/GNOME/gnome-notes/-/commit/994af76ce5144062d55d141129bf6bf5fab002ee.patch
+Patch02:        https://src.fedoraproject.org/rpms/bijiben/blob/rawhide/f/webkitdep.patch
+
 BuildRequires:	intltool
 BuildRequires:	itstool
 BuildRequires:	yelp-tools
@@ -23,7 +25,7 @@ BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(tracker-sparql-3.0)
 BuildRequires:	pkgconfig(uuid)
-BuildRequires:	pkgconfig(webkit2gtk-4.0)
+BuildRequires:	pkgconfig(webkit2gtk-4.1)
 BuildRequires:	pkgconfig(libecal-2.0)
 BuildRequires:	pkgconfig(libedataserver-1.2)
 BuildRequires:	pkgconfig(libedataserverui-1.2)
