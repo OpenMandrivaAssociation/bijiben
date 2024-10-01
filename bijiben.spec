@@ -4,7 +4,7 @@
 Summary:	Simple Note Viewer
 Name:		bijiben
 Version:	40.1
-Release:	10
+Release:	11
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		https://www.gnome.org
@@ -23,7 +23,7 @@ BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libxml-2.0)
-BuildRequires:	pkgconfig(tracker-sparql-3.0)
+BuildRequires:	pkgconfig(tinysparql-3.0)
 BuildRequires:	pkgconfig(uuid)
 BuildRequires:	pkgconfig(webkit2gtk-4.1)
 BuildRequires:	pkgconfig(libecal-2.0)
