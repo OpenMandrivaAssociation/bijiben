@@ -3,15 +3,15 @@
 
 Summary:	Simple Note Viewer
 Name:		bijiben
-Version:	40.1
-Release:	14
+Version:	40.2
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		https://www.gnome.org
 Source0:	https://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 # Upstream patch to fix compilation with meson 0.60+
-Patch0:   https://gitlab.gnome.org/GNOME/gnome-notes/-/commit/994af76ce5144062d55d141129bf6bf5fab002ee.patch
-Patch02:        https://src.fedoraproject.org/rpms/bijiben/blob/rawhide/f/webkitdep.patch
+#Patch0:   https://gitlab.gnome.org/GNOME/gnome-notes/-/commit/994af76ce5144062d55d141129bf6bf5fab002ee.patch
+#Patch02:        https://src.fedoraproject.org/rpms/bijiben/blob/rawhide/f/webkitdep.patch
 
 BuildRequires:	intltool
 BuildRequires:	itstool
@@ -41,8 +41,7 @@ Simple note editor which emphasis on visuals : quickly write
 notes, quickly find it back.
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 %build
 %meson -Dupdate_mimedb=false
