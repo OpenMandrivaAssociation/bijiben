@@ -4,7 +4,7 @@
 Summary:	Simple Note Viewer
 Name:		bijiben
 Version:	40.2
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		https://www.gnome.org
